@@ -1,0 +1,123 @@
+.modal{
+    position: fixed;
+    inset: 0;
+    z-index: 30;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(0,0,0,0.8);
+}
+
+.modal input{
+    padding: 5px 10px;
+    border: 3px solid #000000;
+    border-radius: 5px;
+}
+
+.modal-cancel-btn{
+    width: 35px;
+    height: 35px;
+
+    position: absolute;
+    top: -10px;
+    right: -15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: #ff0000;
+    border-radius: 50%;
+
+    color: #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-cancel-btn:hover{
+    background-color: #b90404;
+}
+
+.add-task,
+.delete-task,
+.search-task{
+    position: relative;
+
+    padding: 20px 30px;
+
+    background-color: #ffffff;
+    border-radius: 12px;
+}
+
+.add-task,
+.delete-task{
+    display: flex;
+    flex-direction: column;
+}
+
+.modal__btn{
+    padding: 5px 15px;
+    margin-top: 10px;
+
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal__btn--add-task{
+    align-self: center;
+
+    background-color: #ffff00;
+}
+
+.modal__btn--add-task:hover{
+    background-color: #d6d616;
+}
+
+.modal__btn--delete-task{
+    align-self: center;
+
+    background-color: #ff2600;
+
+    color: #ffffff;
+}
+
+.modal__btn--delete-task:hover{
+    background-color: #c02b11;
+}
+
+.modal__btn--search-name,
+.modal__btn--search-date{
+    background-color: #00ff00;
+}
+
+.modal__btn--search-name:hover,
+.modal__btn--search-date:hover{
+    background-color: #14c514;
+}
+
+.search-task__flash{
+    margin-top: 15px;
+    padding: 5px 10px;
+
+    background-color: rgba(255, 0, 0, 0.7);
+    border-radius: 8px;
+    text-align: center;
+
+    color: #ffffff;
+}
+
+.modal__btn--clear-searched{
+    margin-left: 10px;
+
+    background-color: #ff2600;
+
+    color: #ffffff;
+}
+
+.modal__btn--clear-searched:hover{
+    background-color: #c02b11;
+}

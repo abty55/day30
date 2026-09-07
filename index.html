@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>勉強管理アプリ</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="js/main.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <header class="site-header">
+            <h1 class="site-header__title">学習管理アプリ</h1>
+            <div class="site-header__menu">
+                <ul class="site-header__list">
+                    <li><button type="button" class="site-header__btn site-header__btn--add-task">タスクを追加する</button></li>
+                    <li><button type="button" class="site-header__btn site-header__btn--delete-task">選択したタスクを消去する</button></li>
+                    <li><button type="button" class="site-header__btn site-header__btn--search-task">タスク検索する</button></li>
+                </ul>
+            </div>
+        </header>
+        <main>
+            <section class="today">
+                <h2 class="today__title">今日は</h2>
+                <div class="today__display">
+                    <p class="today__info js-today-month">○</p>
+                    <p>月</p>
+                    <p class="today__info js-today-date">○</p>
+                    <p>日</p>
+                    <p class="today__info js-today-day">(曜日)</p>
+                    <p class="today__info js-today-weather">天気</p>
+                </div>
+            </section>
+
+            <section class="today-task">
+                <h2 class="today-task__title">本日のタスク</h2>
+                <div class="today-task__cards">
+                     
+                    <!-- <article class="task-card">
+                        <h3 class="task-card__detail">勉強aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</h3>
+                        <p class="task-card__date">12月12日<br>13時00</p>
+                    </article>  -->
+                    
+                </div>
+            </section>
+
+            <section class="total-task">
+                <h2 class="total-task__title">タスク一覧</h2>
+                <div class="total-task__cards">
+
+                    <!-- <article class="task-card">
+                        <h3 class="task-card__detail">勉強aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</h3>
+                        <p class="task-card__date">12月12日<br>13時00</p>
+                    </article>   -->
+
+                </div>
+            </section>
+
+        </main>
+        <footer>
+            <p>©sTuDy.com</p>
+        </footer>
+    </div>
+    
+    <div class="modal-area">
+        <div class="modal modal--add-task is-hidden">
+            <form class="add-task">
+                <label for="add-task-name">タスクの名前</label>
+                <input type="text" id="add-task-name" name="add-task-name" required>
+                <label for="add-task-date">日時</label>
+                <input type="datetime-local" id="add-task-date" name="add-task-date" required>
+                <button type="submit" class="modal__btn modal__btn--add-task">追加する</button>
+                <button type="button" class="modal-cancel-btn">×</button>
+            </form>
+        </div>
+
+        <div class="modal modal--delete-task is-hidden">
+            <div class="delete-task">
+                <h2>本当に消去しますか?</h2>
+                <button type="button" class="modal__btn modal__btn--delete-task">はい</button>
+                <button type="button" class="modal-cancel-btn">×</button>
+            </div>
+        </div>
+
+        <div class="modal modal--search-task is-hidden">
+            <div class="search-task">
+                <label for="search-type">検索タイプ</label>
+                <select name="search-type" id="search-type" class="search-type">
+                    <option value="name">タスク名</option>
+                    <option value="date">日時</option>
+                </select>
+
+                <button type="button" class="modal__btn modal__btn--clear-searched">検索状態をクリアする</button>
+
+                <form class="search-name">
+                    <label for="search-task-name">タスク名</label>
+                    <input type="search" id="search-task-name" name="search-task-name" required>
+                    <button type="submit" class="modal__btn modal__btn--search-name">🔍 </button>
+                    <div class="search-task__flash is-hidden"><p>一致するタスクが存在しませんでした。</p></div>
+                </form>
+
+                <form class="search-date is-hidden">
+                    <input type="datetime-local" id="search-task-former-date" name="search-task-former-date">
+                    <span>~</span>
+                    <input type="datetime-local" id="search-task-latter-date" name="search-task-latter-date">
+                    <button type="submit" class="modal__btn modal__btn--search-date">絞り込む</button>
+                    <div class="search-task__flash is-hidden"><p>一致するタスクが存在しませんでした。</p></div>
+                </form>
+
+                <button type="button" class="modal-cancel-btn">×</button>
+            </div>
+        </div>
+    </div>
+
+
+    
+</body>
+</html>

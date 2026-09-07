@@ -1,0 +1,29 @@
+.today{
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    gap: 20px;
+
+    background-color: #bbf7f7;
+}
+
+.today__title{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.today__display{
+    display: flex;
+    margin: 10px 70px;
+    padding: 5px 10px;
+    align-items: flex-end;
+
+    background-color: #ffffff;
+    border-radius: 12px;
+}
+
+.today__info{
+    margin: 0 10px;
+
+    font-size: 28px;
+    color: #0000ff;
+}

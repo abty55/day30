@@ -1,0 +1,33 @@
+.site-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 20;
+    border-bottom: 2px solid #000000;
+    position: sticky;
+    top: 0;
+
+    background-color: #ffffdd;
+}
+
+.site-header__list{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    list-style-type: none;
+}
+
+.site-header__btn{
+    width: 100%;
+    padding: 5px 10px;
+
+    border: none;
+    border-radius: 8px;
+    background-color: #ddddff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.site-header__btn:hover{
+    background-color: #a6a6d3;
+}

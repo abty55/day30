@@ -1,0 +1,8 @@
+.is-hidden{
+    display: none;
+}
+
+.is-searched{
+    background-color: #00db00;
+    color: #0077ff;
+}
